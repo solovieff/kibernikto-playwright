@@ -1,0 +1,3 @@
+python-dotenv==1.0.0
+kibernikto==1.4.23
+playwright>=1.49.0
