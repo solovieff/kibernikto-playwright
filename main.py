@@ -74,5 +74,5 @@ def pull_out_clickables(click_options_obj):
 
 
 if __name__ == '__main__':
-    asyncio.run(run_cmd_chat())
-    # asyncio.run(test_website(web_link="https://example.com/"))
+    #asyncio.run(run_cmd_chat())
+    asyncio.run(test_website(web_link="https://example.com/"))

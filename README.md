@@ -1,15 +1,15 @@
 # kibernikto-playwright
 
-Use to basic test your pages.  
-Demonstrating kibernikto+playwright.
+Use to basic test your web pages with OpenAI browser control.  
+Demonstrating [kibernikto](https://github.com/solovieff/kibernikto)+[playwright](https://playwright.dev/python/).
 
 What it basically does:
 
 - Goes to yr page and looks what can be clicked. 
-- Generates click options objects for the page with some expectations from element clicks.
+- Generates click options objects for the page with proactive expectations for element clicks.
 - Performs the actual clicks and checks what happens.
 - Compares the expectations and reality.
-- Prints and saves the results in the following form
+- Prints and saves the results in the following form.
 ```json
 {
   "action_description": "The filter successfully applied, displaying only high ",
@@ -39,7 +39,7 @@ OPENAI_API_MODEL=gpt-4o
 Change the url to yr site url
 
 ```python
-asyncio.run(test_website(web_link="http://127.0.0.1:3000/dashboard"))
+asyncio.run(test_website(web_link="https://example.com/"))
 ```
 
 Or run as a console chat
