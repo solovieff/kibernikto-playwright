@@ -22,6 +22,7 @@ class ClickResults(ClickParameters):
     status: str
     action_description: str
     new_url: str | None = None
+    base_url: str | None = None
 
 
 class BasicWebAgent(BaseModel):

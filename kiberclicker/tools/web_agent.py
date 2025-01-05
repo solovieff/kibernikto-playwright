@@ -14,6 +14,7 @@ async def web_agent(
         web_link: str,
         request: str | None = None,
         click_params: dict | None = None,
+        default_clickables_amount: int = 5,
         key: str = "unknown"
 ):
     print(
@@ -26,11 +27,10 @@ async def web_agent(
     )
     result = None
     try:
-        await CLICKER.init_browser(web_link)
         if action == "get_click_params":
             await CLICKER.page.wait_for_load_state('domcontentloaded')
             screenshot_bytes: bytes = await CLICKER.page.screenshot(full_page=True, type="png", scale="css")
-            result = await CLICKER.get_click_options(screenshot_bytes, request=request)
+            result = await CLICKER.get_click_options(screenshot_bytes, request=request, amount=default_clickables_amount)
 
             # await page.close()
         elif action == "click":
